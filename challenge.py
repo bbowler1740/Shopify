@@ -4,9 +4,9 @@ import pandas as pd
 def calculate_avg__order_amount():
     data = pd.read_excel (r'C:\Users\Brayden\Desktop\Personal\Applications\Shopify\2019 Winter Data Science Intern Challenge Data Set.xlsx') #Use a relative path.
     df = pd.DataFrame(data, columns=['order_amount'])
-    x = df.sum()
-    y = (x / df.size) #Size calculates elements in the df object. Represents number of rows in the Excel sheet (or in the business case, total orders).
-    return y
+    sumOrderAmount = df.sum()
+    avgOrder = (sumOrderAmount / df.size) #Size calculates elements in the df object. Represents number of rows in the Excel sheet (or in the business case, total orders).
+    return avgOrder
 
 def calculate_avg_item_cost_per_order():
     data = pd.read_excel (r'C:\Users\Brayden\Desktop\Personal\Applications\Shopify\2019 Winter Data Science Intern Challenge Data Set.xlsx') #Use a relative path.
